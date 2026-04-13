@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Amma ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink: #ff7aa8;
+    --dark: #ff4d88;
+    --bg: #ffe6f2;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--bg), #fff);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* FLOATING HEARTS */
+body::before {
+    content: "❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+    position: fixed;
+    width: 100%;
+    top: -50px;
+    font-size: 20px;
+    animation: fall 10s linear infinite;
+    opacity: 0.3;
+}
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+
+/* SCREENS */
+.screen {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    pointer-events: none;
+    transition: 0.8s ease;
+}
+
+.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* TEXT */
+h1 {
+    font-family: 'Dancing Script';
+    color: var(--dark);
+    font-size: 3.2rem;
+    text-shadow: 0 0 10px #ffb3cc;
+}
+
+/* ICONS */
+.gift, .cake {
+    font-size: 130px;
+    cursor: pointer;
+    animation: float 1.5s infinite;
+}
+
+@keyframes float {
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+}
+
+/* IMAGE */
+.main-img {
+    width: 90%;
+    max-width: 420px;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: 0.4s;
+}
+
+.main-img:hover { transform: scale(1.05); }
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 90%;
+    max-width: 900px;
+}
+
+@media(max-width: 600px){
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* FINAL PAGE */
+#finalPage {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(135deg, #ffe6f2, white);
+    display:none;
+    flex-direction: column;
+    align-items:center;
+    overflow-y:auto;
+    padding:20px;
+    z-index:999;
+}
+
+.voice-box {
+    width: 90%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.voice-box p {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #ff4d88;
+}
+
+.voice-box audio {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: var(--pink);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- GIFT -->
+<div class="screen active" id="gift">
+    <h1>I Got Something For You 🎁</h1>
+    <div class="gift" onclick="show('cake')">🎁</div>
+</div>
+
+<!-- CAKE -->
+<div class="screen" id="cake">
+    <h1>ಅಮ್ಮಾ, ಹುಟ್ಟುಹಬ್ಬದ ಶುಭಾಶಯಗಳು❤️🫶</h1>
+    <div class="cake" onclick="show('family')">🎂</div>
+</div>
+
+<!-- FAMILY -->
+<div class="screen" id="family">
+    <h1>ಅಮ್ಮಾ, ಯಾವಾಗಲೂ ಸಂತೋಷವಾಗಿರು 💖</h1>
+    <img src="/Family portrait with warm smiles.jpeg" class="main-img">
+    <button onclick="show('memories')">ನೆನಪುಗಳನ್ನು ನೋಡಿ 💖📸</button>
+</div>
+
+<!-- MEMORIES -->
+<div class="screen" id="memories">
+    <h1>Our Beautiful Memories 💖</h1>
+
+    <div class="gallery">
+        <img src="/100_0450.JPG">
+        <img src="/100_0485.JPG">
+        <img src="/100_0495.JPG">
+        <img src="/100_1138.JPG">
+        <img src="/100_1139.JPG">
+        <img src="/100_1142.JPG">
+        <img src="/100_1148.JPG">
+        <img src="/100_1181.JPG">
+        <img src="/100_2301.JPG">
+        <img src="/100_2486.JPG">
+        <img src="/100_2653.JPG">
+        <img src="/23062013091.jpg">
+        <img src="/4 x 6.JPG">
+        <img src="/IMG-20190125-WA0001.jpg">
+        <img src="/IMG-20210414-WA0001.jpg">
+        <img src="/IMG-20210414-WA0007.jpg">
+        <img src="/IMG-20210418-WA0012.jpg">
+        <img src="/IMG-20210418-WA0013.jpg">
+        <img src="/IMG-20210418-WA0014.jpg">
+        <img src="/IMG-20210418-WA0016.jpg">
+        <img src="/IMG-20210419-WA0002.jpg">
+        <img src="/P1010033.JPG">
+        <img src="/P1010061.JPG">
+        <img src="/P3121331.JPG">
+        <img src="/P4290022.JPG">
+        <img src="/P4290411.JPG">
+        <img src="/siddhu.JPG">
+        <img src="/Snapchat-612748969 - Copy.jpg">
+        <img src="/Snapchat-632344189 - Copy.jpg">
+        <img src="/P1010395.JPG">
+    </div>
+
+    <button onclick="finalSurprise()">Final Surprise 💌</button>
+</div>
+
+<!-- FINAL PAGE -->
+<div id="finalPage">
+    <h1>Amma ❤️</h1>
+
+    <p style="max-width:350px;">
+        ಅಮ್ಮಾ… ನಿನ್ನ ಪ್ರೀತಿ ನಮ್ಮ ಉಸಿರು ❤️<br>
+        ನಾವು ನಿನ್ನನ್ನು ಉಸಿರು ಇರುವ ತನಕ ಪ್ರೀತಿಸುತ್ತೇವೆ 💖
+        I LOVEE YOUU MUMMYYY🫂❤️
+         <img src="/20250729_085506.jpg" style="width:200px; height:auto;">
+    </p>
+
+    <h2>🎧 Voice Messages</h2>
+
+    <div class="voice-box">
+        <p>RAJU</p><audio controls src="raju.mp3"></audio>
+        <p>KEERTHI</p><audio controls src=""></audio>
+        <p>AADHYA</p><audio controls src="/adhay.mp3"></audio>
+        <p>VAIBHAV</p><audio controls src="/vaybhav.mp3"></audio>
+        <p>NIKHIL</p><audio controls src="/"></audio>
+        <p>SAKHU</p><audio controls src="/sakhu.mp3"></audio>
+        <p>SANJU</p><audio controls src="/sanju.mp3"></audio>
+        <p>SANGEETA</p><audio controls src=""></audio>
+        <p>SHANAMKKA</p><audio controls src=""></audio>
+        <p>SHANTHAKKA</p><audio controls src=""></audio>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+function show(id){
+    confetti({particleCount:180, spread:80});
+    document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
+function finalSurprise(){
+    confetti({particleCount:300, spread:120});
+    document.getElementById("finalPage").style.display = "flex";
+}
+</script>
+
+
+</body>
+</html>
